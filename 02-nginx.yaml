@@ -7,12 +7,9 @@
       name: nginx
       state: present
 
-  - name: restart nginx
+  - name: start nginx
     ansible.builtin.service:
       name: nginx
-      state: restarted
-      
-  - name: enable nginx
-    ansible.builtin.service:
-      name: nginx
+      state: started
       enabled: yes
+      
